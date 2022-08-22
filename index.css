@@ -1,0 +1,65 @@
+#section1{
+    background-image: url("./hack/hack4.jpg");
+    box-flex-group: rgb(21, 31, 21);
+}
+
+
+/*make line under and element*/
+.nav-link{
+    font-family: 'Poppins',sans-serif;
+    font-weight:bold;
+    color:red;
+    float:left;
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.nav-link::after{
+    background-color: red;
+    content: " ";
+    width:0%;
+    height:3px;
+    bottom:0px;
+    transition:width 0.35s ease 0s;
+    position:absolute;
+}
+.nav-link:hover::after{
+    width:100%;
+
+}
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+li a{
+    display:inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    height: 50px;
+    color:#fff;
+    text-transform:uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: hidden;
+    position: relative;
+    transition:.25s ease all;
+   
+    text-decoration:none;
+    line-height:45px;
+}
+li a::after{
+    content:'';
+    display: block;
+    bottom: 0;
+    left:-100px;
+    height:5px;
+    width:100%;
+    background: #dd0034;
+    transition:.5s ease all;
+}
+li a:hover::after{
+    left:0;
+}
